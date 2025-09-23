@@ -1,0 +1,35 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installation phase - installing dependencies"
+      - echo "No dependencies to install for static HTML project"
+      
+  pre_build:
+    commands:
+      - echo "Pre-build phase started on `date`"
+      - echo "Performing pre-build tasks..."
+      - ls -la
+      
+  build:
+    commands:
+      - echo "Build phase started on `date`"
+      - echo "No build process required for static HTML"
+      - echo "Validating HTML structure"
+      
+  post_build:
+    commands:
+      - echo "Post-build phase completed on `date`"
+      - echo "Creating deployment package"
+      
+artifacts:
+  files:
+    - '**/*'
+  name: sampleapp-$(date +%Y-%m-%d-%H-%M-%S)
+  
+cache:
+  paths:
+    - '/root/.npm/**/*'
