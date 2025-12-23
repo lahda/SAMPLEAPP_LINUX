@@ -1,3 +1,7 @@
 #!/bin/bash
-service httpd start
+set -e
+
+systemctl daemon-reload
+systemctl start httpd
+systemctl enable httpd
 
