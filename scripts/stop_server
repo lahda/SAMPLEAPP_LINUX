@@ -1,4 +1,6 @@
 #!/bin/bash
-systemctl stop httpd || true
-
+isExistApp = `pgrep httpd`
+if [[ -n  $isExistApp ]]; then
+    service httpd stop        
+fi
 
