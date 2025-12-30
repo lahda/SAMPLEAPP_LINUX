@@ -83,7 +83,7 @@ SAMPLEAPP_LINUX/
 │   ├── install_dependencies.sh                   # Install required packages
 │   ├── start_application.sh                      # Start the application
 │   ├── stop_application.sh                       # Stop the application
-│   └── validate_application.sh                   # Health checks
+│   
 ├── AWS Full CICD Pipeline Architecture.drawio.png # Architecture diagram
 ├── LICENSE. txt                                   # Apache License 2.0
 └── README.md                                     # This file
